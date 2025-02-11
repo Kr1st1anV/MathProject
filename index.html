@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="OIP.jpg">
+    
+    <title>Big Question</title>
+    <style>
+        :root {
+            --yes_size: 300%;
+            --no_size: 300%;
+          }
+        body {
+            background-color: pink;
+        }
+        #question {
+            padding-top: 2%;
+            padding-bottom: 2%;
+            margin-left: 20%;
+            font-size: 500%;
+            font-family: Verdana;
+            color: #FA727E;
+
+        }
+        #gif {
+            margin-left: 25%;
+            width: 45%;
+        }
+        #yes {
+            margin-top:5%;
+            margin-left:40%;
+            padding-inline: 2%;
+            background-color: #FA727E; /* Green */
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+        #no {
+            margin-top:5%;
+            margin-left:5%;
+            padding-inline: 2%;
+            background-color: #FA727E; /* Green */
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+
+    </style>
+</head>
+<body>
+    <!--Message-->
+    <h1 id="question">♥️ Will you be my valentines? ♥️</h1>
+    <!--Image-->
+    <img id="gif"src="/front.gif" alt="" srcset="">
+    <!--Buttons-->
+    </br> 
+    <a href="/yay.html"> <button id="yes">Yes</button> </a> <button id="no" onclick="noSize()">No</button> 
+    <script>
+        yes_scale = 500
+        yes_left = 40
+        no_scale = 500
+        yes = document.getElementById('yes');
+        no = document.getElementById('no');
+        yes.style.fontSize= yes_scale + "%"
+        no.style.fontSize = no_scale + "%"
+        function noSize() {
+            no_scale = no_scale * 0.9
+            no.style.fontSize= no_scale + "%"
+            yes_scale = yes_scale * 1.1
+            yes.style.fontSize= yes_scale + "%"
+            yes_left = yes_left * 0.98
+            yes.style.marginLeft= yes_left + "%"
+            console.log(yes_scale)
+            if (yes_scale > 2770) {
+                no.style.display = "none"
+            }
+          }
+      </script>
+</body>
+</html>
